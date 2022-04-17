@@ -31,6 +31,7 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
+<<<<<<< HEAD
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"
         android:layout_width="361dp"
@@ -80,6 +81,20 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+=======
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center">
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+    </FrameLayout>
+
+
+>>>>>>> Tela05-Demo
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
