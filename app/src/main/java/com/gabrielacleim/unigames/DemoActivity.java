@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
 public class DemoActivity extends AppCompatActivity {
+
+    private Button buttonweb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,15 @@ public class DemoActivity extends AppCompatActivity {
         MediaController mediaController = new MediaController(this);
         videoView.setMediaController(mediaController);
         mediaController.setAnchorView(videoView);
+
+        buttonweb = (Button) findViewById(R.id.button_web);
+
+        buttonweb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=Fctn-4tlVRM&t=2s")));
+            }
+        });
 
     }
 }
